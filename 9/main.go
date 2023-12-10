@@ -1,12 +1,12 @@
 package main
 
-import "fmt"
-
 /*
 	Разработать конвейер чисел.
 	Даны два канала: в первый пишутся числа (x) из массива,
 	во второй — результат операции x*2, после чего данные из второго канала должны выводиться в stdout.
 */
+
+import "fmt"
 
 func createNumsChan(arr []int) <-chan int {
 	outCh := make(chan int, len(arr))

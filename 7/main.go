@@ -34,19 +34,6 @@ func (m *ConcurrentMap[T]) Set(key string, val T) {
 	m.data[key] = val
 }
 
-func (m *ConcurrentMap[T]) Has(key string) bool {
-	m.RLock()
-	defer m.RUnlock()
-	_, ok := m.data[key]
-	return ok
-}
-
-func (m *ConcurrentMap[T]) Delete(key string) {
-	m.Lock()
-	defer m.Unlock()
-	delete(m.data, key)
-}
-
 func main() {
 	m := NewConcurrentMap[int]()
 	wg := sync.WaitGroup{}

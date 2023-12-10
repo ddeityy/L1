@@ -1,14 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 /*
 Разработать программу, которая переворачивает подаваемую на ход строку
 (например: «главрыба — абырвалг»). Символы могут быть unicode.
 */
+
+import (
+	"fmt"
+	"strings"
+)
 
 func reverseString(str string) string {
 	// преобразовываем строку в слайс рун

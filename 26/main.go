@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 /*
 Разработать программу, которая проверяет, что все символы в строке уникальные
 (true — если уникальные, false etc). Функция проверки должна быть регистронезависимой.
@@ -15,7 +10,12 @@ abCdefAaf — false
 aabcd — false
 */
 
-func allUnique(str string) bool {
+import (
+	"fmt"
+	"strings"
+)
+
+func isSet(str string) bool {
 	str = strings.ToLower(str)
 
 	runeSlice := []rune(str)
@@ -32,7 +32,7 @@ func allUnique(str string) bool {
 }
 
 func main() {
-	fmt.Println(allUnique("abcd"))
-	fmt.Println(allUnique("abCdefAaf"))
-	fmt.Println(allUnique("aabcd"))
+	fmt.Println(isSet("abcd"))
+	fmt.Println(isSet("abCdefAaf"))
+	fmt.Println(isSet("aabcd"))
 }

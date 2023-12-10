@@ -1,10 +1,10 @@
 package main
 
-import "fmt"
-
 /*
 Удалить i-ый элемент из слайса.
 */
+
+import "fmt"
 
 func deleteElemAppend[T any](arr []T, i int) []T {
 	return append(arr[:i], arr[i+1:]...)

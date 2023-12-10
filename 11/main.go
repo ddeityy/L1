@@ -1,10 +1,10 @@
 package main
 
-import "fmt"
-
 /*
 	Реализовать пересечение двух неупорядоченных множеств.
 */
+
+import "fmt"
 
 func findIntersection(nums1 []int, nums2 []int) []int {
 	intersection := make(map[int]int)

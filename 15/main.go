@@ -1,11 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-	"unicode/utf8"
-)
-
 /*
 К каким негативным последствиям может привести данный фрагмент кода, и как это исправить?
 Приведите корректный пример реализации.
@@ -21,6 +15,12 @@ func main() {
 	someFunc()
 }
 */
+
+import (
+	"fmt"
+	"strings"
+	"unicode/utf8"
+)
 
 func createHugeString(size int) string {
 	// используем буфер для эффективной конкатенации строк
@@ -47,7 +47,7 @@ func someFunc() {
 	justString = v[:3]
 	fmt.Println(justString) // 的
 	justString = v[:2]
-	fmt.Println(justString) // из-за среза байт получаем �
+	fmt.Println(justString) // пытаемся прочитать 2/3 байт и получаем �
 
 	// преобразовываем строку в слайс рун
 	r := []rune(v)

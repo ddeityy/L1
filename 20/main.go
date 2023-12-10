@@ -1,14 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 /*
 Разработать программу, которая переворачивает слова в строке.
 Пример: «snow dog sun — sun dog snow»
 */
+
+import (
+	"fmt"
+	"strings"
+)
 
 func reverseWords(str string) string {
 	words := strings.Split(str, " ")
@@ -27,6 +27,6 @@ func reverseWords(str string) string {
 
 func main() {
 	words := "snow dog sun"
-	fmt.Println("initial words:", words)
-	fmt.Println("reversed words:", reverseWords(words))
+	fmt.Println("initial:", words)
+	fmt.Println("reversed:", reverseWords(words))
 }

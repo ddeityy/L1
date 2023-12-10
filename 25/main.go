@@ -1,13 +1,13 @@
 package main
 
+/*
+Реализовать собственную функцию sleep.
+*/
+
 import (
 	"fmt"
 	"time"
 )
-
-/*
-Реализовать собственную функцию sleep.
-*/
 
 func sleep(duration time.Duration) {
 	<-time.After(duration)

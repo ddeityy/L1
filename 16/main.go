@@ -1,12 +1,12 @@
 package main
 
-import (
-	"fmt"
-)
-
 /*
 Реализовать быструю сортировку массива (quicksort) встроенными методами языка.
 */
+
+import (
+	"fmt"
+)
 
 func main() {
 	arr := []int{234234, 2342, 4, 8845, 845, 469, 99, 4556215, 21, 41, 2341, 212, 42131, 624, 6742, 42, 642, 724, 74, 4256, 24634, 5, 25, 4568, 45, 8458, 6548, 58456, 85468}
@@ -23,12 +23,9 @@ func QuickSort(arr []int) {
 func quickSort(arr []int, low int, high int) {
 
 	if low < high {
-		// получаем индекс для разделения слайса
 		partitionIndex := partion(arr, low, high)
 
-		// сортируем левую часть
 		quickSort(arr, low, partitionIndex-1)
-		// сортируем правую часть
 		quickSort(arr, partitionIndex+1, high)
 	}
 }

@@ -1,11 +1,11 @@
 package main
 
-import "fmt"
-
 /*
 Имеется последовательность строк - (cat, cat, dog, cat, tree)
 создать для нее собственное множество.
 */
+
+import "fmt"
 
 func main() {
 	arr := []string{"cat", "cat", "dog", "cat", "tree"}

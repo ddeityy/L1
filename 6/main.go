@@ -1,5 +1,9 @@
 package main
 
+/*
+	Реализовать все возможные способы остановки выполнения горутины.
+*/
+
 import (
 	"context"
 	"fmt"
@@ -7,10 +11,6 @@ import (
 	"sync"
 	"time"
 )
-
-/*
-	Реализовать все возможные способы остановки выполнения горутины.
-*/
 
 type goroutine struct {
 	wg *sync.WaitGroup
